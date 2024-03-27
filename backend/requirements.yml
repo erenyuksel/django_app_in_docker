@@ -1,6 +1,6 @@
 name: backend
 dependencies:
-  - python=3.11.7
+  - python=3.6
   - psycopg2=2.9.9
   - pip=21.2.2
   - pip:
