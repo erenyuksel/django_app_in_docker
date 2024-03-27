@@ -1,8 +1,15 @@
 stages:
   - build
+  - lint
 
 
 build:
   stage: build
   script:
     - docker build --tag="$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" .
+lint:
+  stage: lint
+  script:
+   - export CI_PIPELINE_ID=$CI_PIPELINE_ID
+   - export CI_COMMIT_REF_NAME=$CI_COMMIT_REF_NAME
+   - docker compose -p "$CI_PIPELINE_ID" -f docker-compose.ci.yml run app flake8 .
