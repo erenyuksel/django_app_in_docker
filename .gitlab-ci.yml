@@ -5,4 +5,4 @@ stages:
 build:
   stage: build
   script:
-    - docker build --tag motion-drf .
+    - docker build --tag="$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" .
