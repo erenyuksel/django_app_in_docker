@@ -7,6 +7,7 @@ build:
   stage: build
   script:
     - docker build --tag="$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" .
+
 lint:
   stage: lint
   script:
