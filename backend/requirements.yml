@@ -1,6 +1,6 @@
 name: backend
 dependencies:
-  - python=3.6
+  - python=3.11.7
   - psycopg2=2.9.9
   - pip=21.2.2
   - pip:
@@ -13,7 +13,7 @@ dependencies:
     - coreapi==2.3.3
     - Pygments==2.4.2
     - gunicorn
-    - Pillow==10.2.0
+    - Pillow
     - django-cors-headers
     - pywebcopy
     - beautifulsoup4==4.7.1
