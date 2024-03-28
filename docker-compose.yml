@@ -1,7 +1,7 @@
 version: "3"
 services:
   backend:
-    image: motion-drf:latest
+    image: registry.gitlab.propulsion-home.ch/eren-yuksel/week-7/day-2
     # open port 8000 on the local machine side(left) and port 8000 on the container side(right)
     ports:
       - "8000:8000"
