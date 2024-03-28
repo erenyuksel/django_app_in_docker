@@ -3,7 +3,8 @@ stages:
   - build
   - lint
   - push
-
+before_script:
+  - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" "$CI_REGISTRY"
 pull:
   stage: pull
   allow_failure: true
